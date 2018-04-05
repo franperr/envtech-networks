@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<title>Sankey Diagram - OECD EnvTech</title>
+<style>
+
+@import url(lib/style.css?20120521);
+
+#chart {
+  height: 600px;
+}
+
+.node rect {
+  cursor: move;
+  fill-opacity: .8;
+  shape-rendering: crispEdges;
+
+}
+
+.node text {
+  pointer-events: all;
+  /*text-shadow: 0 1px 0 #fff;*/
+}
+
+/*.link {
+  fill: #000;
+  opacity: .2;
+  stroke: #fff;
+  stroke-opacity: 0.;
+}
+*/
+.link {
+  fill: #000;
+  /*opacity: .1;*/
+  stroke: #f00;
+  stroke-opacity: .9;
+}
+
+
+.link:hover {
+  opacity: .5;
+}
+
+path.line {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+path.area {
+  fill: #e7e7e7;
+}
+
+.axis {
+  shape-rendering: crispEdges;
+}
+
+.x.axis line {
+  stroke: #000;
+  stroke-opacity: .2;
+}
+
+.x.axis .minor {
+  stroke-opacity: .5;
+}
+
+.x.axis path {
+  display: none;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+</header>
+
+
+<select id="class_selector">
+</select>
+<p style="width:100%;">This sankey diagram represents the evolution of clusters of CPC codes for the technology <strong class="class_name"></strong>. <br>You can click on each CPC code to have its description.<br>
+The cluster analysis has been conducted in several overlapping periods. You can see the network maps for each period below the diagram.</p>
+
+
+
+<p id="chart"></p>
+<div id="maplinks"><span>Network maps (periods are overlapping) : </span><br></div>
+<script src="lib/d3.v2.min.js?2.9.1"></script>
+<script src="lib/sankey.js"></script>
+<script src="lib/jquery-2.2.4.min.js"></script>
+<script>
+
+var datafile = "";
+
+function GetURLParameter(sParam) {
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) {
+            return sParameterName[1];
+        }
+    }
+}
+
+datafile = GetURLParameter('data');
+
+if (datafile == undefined) {
+  datafile = '1.1';
+}
+
+function basename(path) {
+    path = path.replace(/\\/g,'/').replace( /.*\//, '' );
+    return path.replace(/\.[^/.]+$/, "");
+}
+
+(function() {
+  $.getJSON("data/categories.json")
+    .done(function( data ) {
+      $.each( data, function( i, item ) {
+        // Populate top select
+        if (datafile == item.OECD_Class) {
+          $("#class_selector").append($('<option>', {
+            value: item.OECD_Class,
+            text: item.OECD_Class + ' - ' + item.Description,
+            selected: true
+          }));
+        }
+        else {
+          $("#class_selector").append($('<option>', {
+            value: item.OECD_Class,
+            text: item.OECD_Class + ' - ' + item.Description
+          }));
+        }
+        
+        // Envtech title
+        if (item.OECD_Class == datafile) {
+          $(".class_name").html(item.OECD_Class + ' - ' + item.Description);
+        }
+        
+        // Add links below
+        if (item.OECD_Class == datafile) {
+          $.each( item.MapsFiles, function( index, value ){
+            $('#maplinks').append('<a href="maps/'+value+'" target="_blank">'+basename(value)+'</a> - ');
+          });
+        }
+      });
+    });
+  $(document).ready(function () {
+    // We change the parameter url when select change
+    $("#class_selector").change(function () {
+      window.location = location.protocol + '//' + location.host + location.pathname + '?data=' + this.value;
+    });
+   
+  });  
+  
+})();
+
+function getCPCURL (str) {
+  var retval = [];
+  $.each(str.split(' & '), function( i, item) {
+    retval.push('<a href="https://worldwide.espacenet.com/classification?locale=en_EP#!/CPC=' + item + '" target="_blank">'+ item + '</a>');
+    //retval.push('<p class="cpc-click" data="' + item + '">'+ item + '</p>');
+  });
+
+  return retval.join(' & ');
+}
+
+try {
+	var term = location.search.split('?term=')[1].replace('%20'," ")
+	document.write(term);}
+catch(err)
+	{
+	var term='dqdqsdsqdsq';
+	}
+
+
+
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+	totalwidth=1100,
+	totalheight=600,
+	nodewidth=15,
+    width = totalwidth - margin.left - margin.right,
+    height = totalheight - margin.top - margin.bottom;
+
+var formatNumber = d3.format(",.0f"),
+    format = function(d) { return formatNumber(d) + " records"; },
+    color = d3.scale.category20();
+
+var formatNumberstrength = d3.format(",.2f"),
+    format = function(d) { return formatNumber(d) ; },
+    color = d3.scale.category20();
+
+var sankey = d3.sankey()
+    .nodeWidth(nodewidth)
+    .nodePadding(10)
+    .size([width, height]);
+
+var path = sankey.link();
+
+var minx;
+var maxx;
+
+d3.json("data/" + datafile + ".json", function(energy) {
+  metas= energy.metas;
+  minx = energy.metas.min_year;
+  maxx = energy.metas.max_year;
+  ticksnb = energy.metas.nb_ticks;
+  var minstre = energy.metas.minstre;
+  var maxstre = energy.metas.maxstre;
+  var deltastre=maxstre-minstre;
+  sankey
+      .nodes(energy.nodes)
+      .links(energy.links)
+      .layout(32);
+
+  var link = svg.append("g").selectAll(".link")
+      .data(energy.links)
+      .enter().append("path")
+      .attr("class", "link")
+      .attr("d", path)
+      .style("stroke-width", function(d) { return 1;})//Math.min(10, d.dy); })
+	  .style("opacity",function(d) { return (d.value - minstre)/(deltastre+0.2) / 2.3 +.05;})
+      .sort(function(a, b) { return b.dy - a.dy; })
+	  .on("mouseover", function(){d3.select(this).style("opacity", .5);})
+	  .on("mouseout", function(d){d3.select(this).style("opacity",  (d.value - minstre)/(deltastre+0.2) / 2 +.1);});
+      link.append("title")
+      .text(function(d) { return d.source.name.split('-*-')[0] + "("+d.source.period + ")’ " + d.target.name.split('-*-')[0] + " ("+d.target.period + ")\nstrength: " + formatNumberstrength(d.value) + '\n' + 'shared:' + d.shared; })
+
+  var node = svg.append("g").selectAll(".node")
+	  .data(energy.nodes)
+      .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
+      .call(d3.behavior.drag()
+      .origin(function(d) { return d; })
+      .on("dragstart", function() { this.parentNode.appendChild(this); })
+      .on("drag", dragmove));
+	  
+  	node.append("rect")
+      .attr("height", function(d) { return d.dy; })
+      .attr("width", sankey.nodeWidth())
+  	  .attr('rx',1)
+  	  .attr('ry',1)
+      .style("fill", function(d) { return d.color;})// = color(d.name.replace(/ .*/, "")); })
+  	  .style("opacity", 0.8)
+	  .style('stroke', "#000001")
+      .style("stroke-width", function(d) {  if (d.terms.search(term)>-1)  {return 5;} else {return 1;}} )
+      .append("title")
+      .text(function(d) { return d.name.split('-*-')[0] + "\n"+'period:'+d.period+ "\n" + formatNumber(d.value) + ' records' + "\n" + 'Terms:'+d.terms; });
+
+    node.append("text")
+      .attr("x", -6)
+      .attr("y", function(d) { return d.dy / 2; })
+      .attr("dy", ".35em")
+      .attr("text-anchor", "end")
+      .attr("transform", null)
+      .html(function(d) { return getCPCURL(d.name.split('-*-')[0]);})
+      .filter(function(d) { return d.x < width / 2; })
+      .attr("x", 6 + sankey.nodeWidth())
+      .attr("text-anchor", "start");
+
+  var x = d3.scale.linear().range([0+nodewidth/2, width-nodewidth/2]).domain([minx, maxx]);
+
+  var xAxis = d3.svg.axis().scale(x).ticks(ticksnb*2).tickSize(height).orient("top");
+
+  svg.append("g")
+    .attr("class", "x axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(xAxis);
+
+  function dragmove(d) {
+    d3.select(this).attr("transform", "translate(" + d.x + "," + (d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))) + ")");
+    sankey.relayout();
+    link.attr("d", path);}
+
+});
+
+var svg = d3.select("#chart").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+</script>
+</body>
+</html>
