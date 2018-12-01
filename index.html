@@ -85,13 +85,22 @@ The cluster analysis has been conducted in several overlapping periods. You can 
 
 <p id="chart"></p>
 <div id="maplinks"><span>Network maps (periods are overlapping) : </span><br></div>
+<div id="evolution">
+	<h2>Evolution over time</h2>
+	<p>These plots represent the average number of patent families and the average annual growth of patent families over a 5 years period for <em><span class="class_name"></span></em>, starting from 1971.</p>
+	<img id="evolgraph" src="" width="100%"> 
+</div>
 <script src="lib/d3.v2.min.js?2.9.1"></script>
 <script src="lib/sankey.js"></script>
 <script src="lib/jquery-2.2.4.min.js"></script>
 <script>
 
-var datafile = "";
 
+//////////////////////////////////
+// FUNCTIONS
+//////////////////////////////////
+
+// Return the value of parameter in the url
 function GetURLParameter(sParam) {
     var sPageURL = window.location.search.substring(1);
     var sURLVariables = sPageURL.split('&');
@@ -103,18 +112,41 @@ function GetURLParameter(sParam) {
     }
 }
 
-datafile = GetURLParameter('data');
-
-if (datafile == undefined) {
-  datafile = '1.1';
-}
-
+// Return filename in a path
 function basename(path) {
     path = path.replace(/\\/g,'/').replace( /.*\//, '' );
     return path.replace(/\.[^/.]+$/, "");
 }
 
+// Return CPC urls in espacenet for string like 'B03C04 & A01C36'
+function getCPCURL (str) {
+  var retval = [];
+  $.each(str.split(' & '), function( i, item) {
+    retval.push('<a href="https://worldwide.espacenet.com/classification?locale=en_EP#!/CPC=' + item + '" target="_blank">'+ item + '</a>');
+    //retval.push('<p class="cpc-click" data="' + item + '">'+ item + '</p>');
+  });
+
+  return retval.join(' & ');
+}
+
+/////////////////////////////////
+// CODE
+/////////////////////////////////
+
+// Obtaining tech ref
+var datafile = "";
+datafile = GetURLParameter('data');
+if (datafile == undefined) {
+  datafile = '1.1';
+}
+var evol_img = datafile.replace('.', '_');
+
 (function() {
+
+  // Loading evolution graph
+  $("#evolgraph").attr("src","./evol/" + evol_img + "_.png");
+
+  // Loading JSON and populating dropdown menu and map links
   $.getJSON("data/categories.json")
     .done(function( data ) {
       $.each( data, function( i, item ) {
@@ -138,7 +170,7 @@ function basename(path) {
           $(".class_name").html(item.OECD_Class + ' - ' + item.Description);
         }
         
-        // Add links below
+        // Add map links
         if (item.OECD_Class == datafile) {
           $.each( item.MapsFiles, function( index, value ){
             $('#maplinks').append('<a href="maps/'+value+'" target="_blank">'+basename(value)+'</a> - ');
@@ -155,16 +187,6 @@ function basename(path) {
   });  
   
 })();
-
-function getCPCURL (str) {
-  var retval = [];
-  $.each(str.split(' & '), function( i, item) {
-    retval.push('<a href="https://worldwide.espacenet.com/classification?locale=en_EP#!/CPC=' + item + '" target="_blank">'+ item + '</a>');
-    //retval.push('<p class="cpc-click" data="' + item + '">'+ item + '</p>');
-  });
-
-  return retval.join(' & ');
-}
 
 try {
 	var term = location.search.split('?term=')[1].replace('%20'," ")
