@@ -2,181 +2,217 @@
  {
    "OECD_Class": "1.1",
    "Description": "AIR POLLUTION ABATEMENT",
-   "MapsFiles": ["1-1/1970-1983.pdf","1-1/1978-1989.pdf","1-1/1984-1995.pdf","1-1/1990-1999.pdf","1-1/1996-2002.pdf","1-1/2000-2005.pdf","1-1/2003-2008.pdf","1-1/2006-2010.pdf"]
+   "MapsFiles": ["1-1/1970-1983.pdf","1-1/1978-1989.pdf","1-1/1984-1995.pdf","1-1/1990-1999.pdf","1-1/1996-2002.pdf","1-1/2000-2005.pdf","1-1/2003-2008.pdf","1-1/2006-2010.pdf"],
+   "SubComp": ["1.1.1 - Emissions abatement from stationary sources (e.g. SOx, NOx, PM emissions from combustion plants)","1.1.2 - Emissions abatement from mobile sources (e.g. NOx, CO, HC, PM emissions from motor vehicles)","1.1.3 - Not elsewhere classified"]
  },
  {
    "OECD_Class": "1.2",
    "Description": "WATER POLLUTION ABATEMENT",
-   "MapsFiles": ["1-2/1970-1982.pdf","1-2/1976-1988.pdf","1-2/1983-1993.pdf","1-2/1989-1997.pdf","1-2/1994-2001.pdf","1-2/1998-2004.pdf","1-2/2002-2007.pdf","1-2/2005-2010.pdf"]
+   "MapsFiles": ["1-2/1970-1982.pdf","1-2/1976-1988.pdf","1-2/1983-1993.pdf","1-2/1989-1997.pdf","1-2/1994-2001.pdf","1-2/1998-2004.pdf","1-2/2002-2007.pdf","1-2/2005-2010.pdf"],
+   "SubComp": ["1.2.1 - Water and wastewater treatment","1.2.2 - Fertilizers from wastewater","1.2.3 - Oil spill cleanup"]
  },
  {
    "OECD_Class": "1.3",
    "Description": "WASTE MANAGEMENT",
-   "MapsFiles": ["1-3/1970-1984.pdf","1-3/1978-1990.pdf","1-3/1985-1993.pdf","1-3/1991-1996.pdf","1-3/1994-1999.pdf","1-3/1997-2003.pdf","1-3/2000-2007.pdf","1-3/2004-2010.pdf"]
+   "MapsFiles": ["1-3/1970-1984.pdf","1-3/1978-1990.pdf","1-3/1985-1993.pdf","1-3/1991-1996.pdf","1-3/1994-1999.pdf","1-3/1997-2003.pdf","1-3/2000-2007.pdf","1-3/2004-2010.pdf"],
+   "SubComp": ["1.3.1 - Solid waste collection","1.3.2 - Material recycling","1.3.3 - Fertilizers from waste","1.3.4 - Incineration and energy recovery","1.3.5 - Landfilling [n.a.]","1.3.6 - Not elsewhere classified"]
  },
  {
    "OECD_Class": "1.4",
    "Description": "SOIL REMEDIATION",
-   "MapsFiles": ["1-4/1970-1991.pdf","1-4/1990-1992.pdf","1-4/1992-1994.pdf","1-4/1993-1996.pdf","1-4/1995-1999.pdf","1-4/1997-2002.pdf","1-4/2000-2006.pdf","1-4/2003-2010.pdf"]
+   "MapsFiles": ["1-4/1970-1991.pdf","1-4/1990-1992.pdf","1-4/1992-1994.pdf","1-4/1993-1996.pdf","1-4/1995-1999.pdf","1-4/1997-2002.pdf","1-4/2000-2006.pdf","1-4/2003-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "1.5",
    "Description": "ENVIRONMENTAL MONITORING",
-   "MapsFiles": ["1-5/1970-1996.pdf","1-5/1992-2000.pdf","1-5/1997-2003.pdf","1-5/2001-2005.pdf","1-5/2004-2006.pdf","1-5/2006-2008.pdf","1-5/2007-2010.pdf"]
+   "MapsFiles": ["1-5/1970-1996.pdf","1-5/1992-2000.pdf","1-5/1997-2003.pdf","1-5/2001-2005.pdf","1-5/2004-2006.pdf","1-5/2006-2008.pdf","1-5/2007-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "2.1",
    "Description": "DEMAND-SIDE TECHNOLOGIES (water conservation)",
-   "MapsFiles": ["2-1/1970-1983.pdf","2-1/1977-1990.pdf","2-1/1984-1995.pdf","2-1/1991-1999.pdf","2-1/1996-2003.pdf","2-1/2000-2006.pdf","2-1/2004-2008.pdf","2-1/2007-2010.pdf"]
+   "MapsFiles": ["2-1/1970-1983.pdf","2-1/1977-1990.pdf","2-1/1984-1995.pdf","2-1/1991-1999.pdf","2-1/1996-2003.pdf","2-1/2000-2006.pdf","2-1/2004-2008.pdf","2-1/2007-2010.pdf"],
+   "SubComp": ["2.1.1 - Indoor water conservation (faucets, showers, sanitation, home appliances)","2.1.2 - Irrigation water conservation","2.1.3 - Water conservation in thermoelectric power production","2.1.4 - Water distribution"]
  },
  {
    "OECD_Class": "2.2",
    "Description": "SUPPLY-SIDE TECHNOLOGIES (water availability)",
-   "MapsFiles": ["2-2/1970-1988.pdf","2-2/1980-1993.pdf","2-2/1989-1996.pdf","2-2/1994-1999.pdf","2-2/1997-2003.pdf","2-2/2000-2006.pdf","2-2/2004-2008.pdf","2-2/2007-2010.pdf"]
+   "MapsFiles": ["2-2/1970-1988.pdf","2-2/1980-1993.pdf","2-2/1989-1996.pdf","2-2/1994-1999.pdf","2-2/1997-2003.pdf","2-2/2000-2006.pdf","2-2/2004-2008.pdf","2-2/2007-2010.pdf"],
+   "SubComp": ["2.2.1 - Water collection (rain, surface and ground-water)","2.2.2 - Water storage","2.2.3 - Desalination of sea water [n.a.]"]
  },
  {
    "OECD_Class": "4.1",
    "Description": "RENEWABLE ENERGY GENERATION",
-   "MapsFiles": ["4-1/1970-1987.pdf","4-1/1981-1996.pdf","4-1/1988-2002.pdf","4-1/1997-2006.pdf","4-1/2003-2008.pdf","4-1/2007-2009.pdf","4-1/2009-2010.pdf"]
+   "MapsFiles": ["4-1/1970-1987.pdf","4-1/1981-1996.pdf","4-1/1988-2002.pdf","4-1/1997-2006.pdf","4-1/2003-2008.pdf","4-1/2007-2009.pdf","4-1/2009-2010.pdf"],
+   "SubComp": ["4.1.1 - Wind energy","4.1.2 - Solar thermal energy","4.1.3 - Solar photovoltaic (PV) energy","4.1.4 - Solar thermal-PV hybrids","4.1.5 - Geothermal energy","4.1.6 - Marine energy","4.1.7 - Hydro energy (conventional, tidal, stream)"]
  },
  {
    "OECD_Class": "4.2",
    "Description": "ENERGY GENERATION FROM FUELS OF NON-FOSSIL ORIGIN",
-   "MapsFiles": ["4-2/1970-1994.pdf","4-2/1984-2000.pdf","4-2/1995-2004.pdf","4-2/2001-2006.pdf","4-2/2005-2007.pdf","4-2/2007-2008.pdf","4-2/2008-2009.pdf","4-2/2009-2010.pdf"]
+   "MapsFiles": ["4-2/1970-1994.pdf","4-2/1984-2000.pdf","4-2/1995-2004.pdf","4-2/2001-2006.pdf","4-2/2005-2007.pdf","4-2/2007-2008.pdf","4-2/2008-2009.pdf","4-2/2009-2010.pdf"],
+   "SubComp": ["4.2.1 - Biofuels","4.2.2 - Fuel from waste (e.g. methane)"]
  },
  {
    "OECD_Class": "4.3",
    "Description": "COMBUSTION TECHNOLOGIES WITH MITIGATION POTENTIAL (e.g. using fossil fuels, biomass, waste, etc.)",
-   "MapsFiles": ["4-3/1970-1990.pdf","4-3/1982-1995.pdf","4-3/1991-1998.pdf","4-3/1996-2001.pdf","4-3/1999-2003.pdf","4-3/2002-2006.pdf","4-3/2004-2008.pdf","4-3/2007-2010.pdf"]
+   "MapsFiles": ["4-3/1970-1990.pdf","4-3/1982-1995.pdf","4-3/1991-1998.pdf","4-3/1996-2001.pdf","4-3/1999-2003.pdf","4-3/2002-2006.pdf","4-3/2004-2008.pdf","4-3/2007-2010.pdf"],
+   "SubComp": ["4.3.1 - Technologies for improved output efficiency (combined heat and power, combined cycles, etc.)","4.3.2 - Technologies for improved input efficiency (efficient combustion or heat usage)"]
  },
  {
    "OECD_Class": "4.4",
    "Description": "NUCLEAR ENERGY",
-   "MapsFiles": ["4-4/1970-1979.pdf","4-4/1977-1982.pdf","4-4/1980-1984.pdf","4-4/1983-1986.pdf","4-4/1985-1990.pdf","4-4/1987-1995.pdf","4-4/1991-2002.pdf","4-4/1996-2010.pdf"]
+   "MapsFiles": ["4-4/1970-1979.pdf","4-4/1977-1982.pdf","4-4/1980-1984.pdf","4-4/1983-1986.pdf","4-4/1985-1990.pdf","4-4/1987-1995.pdf","4-4/1991-2002.pdf","4-4/1996-2010.pdf"],
+   "SubComp": ["4.4.1 - Nuclear fusion reactors","4.4.2 - Nuclear fission reactors"]
  },
  {
    "OECD_Class": "4.5",
    "Description": "TECHNOLOGIES FOR AN EFFICIENT ELECTRICAL POWER GENERATION, TRANSMISSION OR DISTRIBUTION",
-   "MapsFiles": ["4-5/1970-1987.pdf","4-5/1986-1989.pdf","4-5/1988-1992.pdf","4-5/1990-1997.pdf","4-5/1993-2004.pdf","4-5/1998-2008.pdf","4-5/2005-2010.pdf"]
+   "MapsFiles": ["4-5/1970-1987.pdf","4-5/1986-1989.pdf","4-5/1988-1992.pdf","4-5/1990-1997.pdf","4-5/1993-2004.pdf","4-5/1998-2008.pdf","4-5/2005-2010.pdf"],
+   "SubComp": ["4.5.1 - Superconducting electric elements or equipment","4.5.2 - Not elsewhere classified (incl. FACTS, APF, etc.)"]
  },
  {
    "OECD_Class": "4.6",
    "Description": "ENABLING TECHNOLOGIES (Technologies with potential or indirect contribution to emissions mitigation)",
-   "MapsFiles": ["4-6/1970-1992.pdf","4-6/1985-1998.pdf","4-6/1993-2001.pdf","4-6/1999-2003.pdf","4-6/2002-2005.pdf","4-6/2004-2007.pdf","4-6/2006-2009.pdf","4-6/2008-2010.pdf"]
+   "MapsFiles": ["4-6/1970-1992.pdf","4-6/1985-1998.pdf","4-6/1993-2001.pdf","4-6/1999-2003.pdf","4-6/2002-2005.pdf","4-6/2004-2007.pdf","4-6/2006-2009.pdf","4-6/2008-2010.pdf"],
+   "SubComp": ["4.6.1 - Energy storage","4.6.1.1 - Batteries","4.6.1.2 - Capacitors","4.6.1.3 - Thermal storage","4.6.1.4 - Pressurised fluid storage","4.6.1.5 - Mechanical storage","4.6.1.6 - Pumped storage","4.6.2 - Hydrogen technology","4.6.3 - Fuel cells","4.6.4 - Smart grids in energy sector"]
  },
  {
    "OECD_Class": "4.7",
    "Description": "OTHER ENERGY CONVERSION OR MANAGEMENT SYSTEMS REDUCING GHG EMISSIONS",
-   "MapsFiles": ["4-7/1970-1992.pdf","4-7/1981-2001.pdf","4-7/1993-2004.pdf","4-7/2002-2007.pdf","4-7/2005-2009.pdf","4-7/2008-2010.pdf"]
+   "MapsFiles": ["4-7/1970-1992.pdf","4-7/1981-2001.pdf","4-7/1993-2004.pdf","4-7/2002-2007.pdf","4-7/2005-2009.pdf","4-7/2008-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "5.1",
    "Description": "CO2 CAPTURE OR STORAGE (CCS)",
-   "MapsFiles": ["5-1/1970-1989.pdf","5-1/1983-1996.pdf","5-1/1990-2001.pdf","5-1/1997-2005.pdf","5-1/2002-2007.pdf","5-1/2006-2008.pdf","5-1/2008-2009.pdf","5-1/2009-2010.pdf"]
+   "MapsFiles": ["5-1/1970-1989.pdf","5-1/1983-1996.pdf","5-1/1990-2001.pdf","5-1/1997-2005.pdf","5-1/2002-2007.pdf","5-1/2006-2008.pdf","5-1/2008-2009.pdf","5-1/2009-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "5.2",
    "Description": "CAPTURE OR DISPOSAL OF GREENHOUSE GASES OTHER THAN CO2",
-   "MapsFiles": ["5-2/1970-1994.pdf","5-2/1989-1998.pdf","5-2/1995-2000.pdf","5-2/1999-2002.pdf","5-2/2001-2004.pdf","5-2/2003-2006.pdf","5-2/2005-2008.pdf","5-2/2007-2010.pdf"]
+   "MapsFiles": ["5-2/1970-1994.pdf","5-2/1989-1998.pdf","5-2/1995-2000.pdf","5-2/1999-2002.pdf","5-2/2001-2004.pdf","5-2/2003-2006.pdf","5-2/2005-2008.pdf","5-2/2007-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "6.1",
    "Description": "ROAD TRANSPORT",
-   "MapsFiles": ["6-1/1970-1990.pdf","6-1/1982-1996.pdf","6-1/1991-2000.pdf","6-1/1997-2003.pdf","6-1/2001-2005.pdf","6-1/2004-2007.pdf","6-1/2006-2009.pdf","6-1/2008-2010.pdf"]
+   "MapsFiles": ["6-1/1970-1990.pdf","6-1/1982-1996.pdf","6-1/1991-2000.pdf","6-1/1997-2003.pdf","6-1/2001-2005.pdf","6-1/2004-2007.pdf","6-1/2006-2009.pdf","6-1/2008-2010.pdf"],
+   "SubComp": ["6.1.1 - Conventional vehicles (based on internal combustion engine)","6.1.2 - Hybrid vehicles","6.1.3 - Electric vehicles","6.1.4 - Fuel efficiency-improving vehicle design (common to all road vehicles)"]
  },
  {
    "OECD_Class": "6.2",
    "Description": "RAIL TRANSPORT",
-   "MapsFiles": ["6-2/1970-1990.pdf","6-2/1984-1995.pdf","6-2/1991-1999.pdf","6-2/1996-2002.pdf","6-2/2000-2005.pdf","6-2/2003-2007.pdf","6-2/2006-2008.pdf","6-2/2008-2010.pdf"]
+   "MapsFiles": ["6-2/1970-1990.pdf","6-2/1984-1995.pdf","6-2/1991-1999.pdf","6-2/1996-2002.pdf","6-2/2000-2005.pdf","6-2/2003-2007.pdf","6-2/2006-2008.pdf","6-2/2008-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "6.3",
    "Description": "AIR TRANSPORT",
-   "MapsFiles": ["6-3/1970-1990.pdf","6-3/1983-1995.pdf","6-3/1991-1999.pdf","6-3/1996-2002.pdf","6-3/2000-2004.pdf","6-3/2003-2006.pdf","6-3/2005-2008.pdf","6-3/2007-2010.pdf"]
+   "MapsFiles": ["6-3/1970-1990.pdf","6-3/1983-1995.pdf","6-3/1991-1999.pdf","6-3/1996-2002.pdf","6-3/2000-2004.pdf","6-3/2003-2006.pdf","6-3/2005-2008.pdf","6-3/2007-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "6.4",
    "Description": "MARITIME OR WATERWAYS TRANSPORT",
-   "MapsFiles": ["6-4/1970-1983.pdf","6-4/1977-1989.pdf","6-4/1984-1995.pdf","6-4/1990-2000.pdf","6-4/1996-2004.pdf","6-4/2001-2007.pdf","6-4/2005-2009.pdf","6-4/2008-2010.pdf"]
+   "MapsFiles": ["6-4/1970-1983.pdf","6-4/1977-1989.pdf","6-4/1984-1995.pdf","6-4/1990-2000.pdf","6-4/1996-2004.pdf","6-4/2001-2007.pdf","6-4/2005-2009.pdf","6-4/2008-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "6.5",
    "Description": "ENABLING TECHNOLOGIES IN TRANSPORT",
-   "MapsFiles": ["6-5/1970-2004.pdf","6-5/1999-2007.pdf","6-5/2005-2009.pdf","6-5/2008-2010.pdf"]
+   "MapsFiles": ["6-5/1970-2004.pdf","6-5/1999-2007.pdf","6-5/2005-2009.pdf","6-5/2008-2010.pdf"],
+   "SubComp": ["6.5.1 - Electric vehicle charging","6.5.2 - Application of fuel cell and hydrogen technology to transportation"]
  },
  {
    "OECD_Class": "7.1",
    "Description": "INTEGRATION OF RENEWABLE ENERGY SOURCES IN BUILDINGS",
-   "MapsFiles": ["7-1/1970-1996.pdf","7-1/1982-2002.pdf","7-1/1997-2006.pdf","7-1/2003-2008.pdf","7-1/2007-2009.pdf","7-1/2009-2010.pdf"]
+   "MapsFiles": ["7-1/1970-1996.pdf","7-1/1982-2002.pdf","7-1/1997-2006.pdf","7-1/2003-2008.pdf","7-1/2007-2009.pdf","7-1/2009-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "7.2",
    "Description": "ENERGY EFFICIENCY IN BUILDINGS",
-   "MapsFiles": ["7-2/1970-1998.pdf","7-2/1992-2002.pdf","7-2/1999-2005.pdf","7-2/2003-2007.pdf","7-2/2006-2008.pdf","7-2/2008-2009.pdf","7-2/2009-2010.pdf"]
+   "MapsFiles": ["7-2/1970-1998.pdf","7-2/1992-2002.pdf","7-2/1999-2005.pdf","7-2/2003-2007.pdf","7-2/2006-2008.pdf","7-2/2008-2009.pdf","7-2/2009-2010.pdf"],
+   "SubComp": ["7.2.1 - Lighting","7.2.2 - Heating, ventilation or air conditioning [HVAC]","7.2.3 - Home appliances","7.2.4 - Elevators, escalators and moving walkways","7.2.5 - Information and communication technologies [ICT]","7.2.6 - End-user side"]
  },
  {
    "OECD_Class": "7.3",
    "Description": "ARCHITECTURAL OR CONSTRUCTIONAL ELEMENTS IMPROVING THE THERMAL PERFORMANCE OF BUILDINGS",
-   "MapsFiles": ["7-3/1970-1993.pdf","7-3/1986-1997.pdf","7-3/1994-2000.pdf","7-3/1998-2002.pdf","7-3/2001-2004.pdf","7-3/2003-2006.pdf","7-3/2005-2008.pdf","7-3/2007-2010.pdf"]
+   "MapsFiles": ["7-3/1970-1993.pdf","7-3/1986-1997.pdf","7-3/1994-2000.pdf","7-3/1998-2002.pdf","7-3/2001-2004.pdf","7-3/2003-2006.pdf","7-3/2005-2008.pdf","7-3/2007-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "7.4",
    "Description": "ENABLING TECHNOLOGIES IN BUILDINGS",
-   "MapsFiles": ["7-4/1970-1986.pdf","7-4/1980-1992.pdf","7-4/1987-1997.pdf","7-4/1993-2001.pdf","7-4/1998-2004.pdf","7-4/2002-2007.pdf","7-4/2005-2009.pdf","7-4/2008-2010.pdf"]
+   "MapsFiles": ["7-4/1970-1986.pdf","7-4/1980-1992.pdf","7-4/1987-1997.pdf","7-4/1993-2001.pdf","7-4/1998-2004.pdf","7-4/2002-2007.pdf","7-4/2005-2009.pdf","7-4/2008-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "8.1",
    "Description": "WASTEWATER TREATMENT",
-   "MapsFiles": ["8-1/1970-1984.pdf","8-1/1978-1990.pdf","8-1/1985-1995.pdf","8-1/1991-1999.pdf","8-1/1996-2002.pdf","8-1/2000-2005.pdf","8-1/2003-2008.pdf","8-1/2006-2010.pdf"]
+   "MapsFiles": ["8-1/1970-1984.pdf","8-1/1978-1990.pdf","8-1/1985-1995.pdf","8-1/1991-1999.pdf","8-1/1996-2002.pdf","8-1/2000-2005.pdf","8-1/2003-2008.pdf","8-1/2006-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "8.2",
    "Description": "SOLID WASTE MANAGEMENT",
-   "MapsFiles": ["8-2/1970-1989.pdf","8-2/1981-1993.pdf","8-2/1990-1997.pdf","8-2/1994-2000.pdf","8-2/1998-2003.pdf","8-2/2001-2006.pdf","8-2/2004-2008.pdf","8-2/2007-2010.pdf"]
+   "MapsFiles": ["8-2/1970-1989.pdf","8-2/1981-1993.pdf","8-2/1990-1997.pdf","8-2/1994-2000.pdf","8-2/1998-2003.pdf","8-2/2001-2006.pdf","8-2/2004-2008.pdf","8-2/2007-2010.pdf"],
+   "SubComp": ["8.2.1 - Waste collection, transportation, transfer or storage","8.2.2 - Waste processing or separation","8.2.3 - Landfill technologies aiming to mitigate methane emissions","8.2.4 - Bio-organic fraction processing; Production of fertilisers from the organic fraction of waste or refuse","8.2.5 - Reuse, recycling or recovery technologies","8.2.5.1 - Dismantling or mechanical processing of waste for the recovery of materials during separation, disassembly, pre­processing or upgrading","8.2.5.2 - Metal recycling","8.2.5.3 - Disassembly of vehicles for recovery of salvageable parts","8.2.5.4 - Construction or demolition [C&D] waste","8.2.5.5 - Glass recycling","8.2.5.6 - Plastics recycling","8.2.5.7 - Paper recycling","8.2.5.8 - Disintegrating fibre-containing textile articles to obtain fibres for re-use","8.2.5.9 - Rubber waste recycling","8.2.5.10 - Recovery of polymers other than plastics or rubbers","8.2.5.11 - Recovery of luminescent materials","8.2.5.12 - Recovery of fats, fatty oils, fatty acids or other fatty substances, e.g. lanolin or waxes","8.2.5.13 - Recovery of tanning agents from leather","8.2.5.14 - Recycling of wood or furniture waste (production of fertilisers from the organic fraction of waste or refuse)","8.2.5.15 - Packaging reuse or recycling (bio-packaging)","8.2.5.16 - Recycling of waste of electrical or electronic equipment","8.2.5.17 - Recycling of batteries","8.2.5.18 - Recycling of fuel cells","8.2.5.19 - Nuclear fuel reprocessing","8.2.5.20 - Reuse, recycling or recovery technologies cross-cutting to different types of waste"]
  },
  {
    "OECD_Class": "8.3",
    "Description": "ENABLING TECHNOLOGIES OR TECHNOLOGIES WITH A POTENTIAL OR INDIRECT CONTRIBUTION TO GHG MITIGATION",
-   "MapsFiles": ["8-3/1970-1992.pdf","8-3/1990-1996.pdf","8-3/1993-1999.pdf","8-3/1997-2002.pdf","8-3/2000-2004.pdf","8-3/2003-2006.pdf","8-3/2005-2008.pdf","8-3/2007-2010.pdf"]
+   "MapsFiles": ["8-3/1970-1992.pdf","8-3/1990-1996.pdf","8-3/1993-1999.pdf","8-3/1997-2002.pdf","8-3/2000-2004.pdf","8-3/2003-2006.pdf","8-3/2005-2008.pdf","8-3/2007-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "9.1",
    "Description": "TECHNOLOGIES RELATED TO METAL PROCESSING",
-   "MapsFiles": ["9-1/1970-1981.pdf","9-1/1976-1987.pdf","9-1/1982-1992.pdf","9-1/1988-1997.pdf","9-1/1993-2001.pdf","9-1/1998-2005.pdf","9-1/2002-2008.pdf","9-1/2006-2010.pdf"]
+   "MapsFiles": ["9-1/1970-1981.pdf","9-1/1976-1987.pdf","9-1/1982-1992.pdf","9-1/1988-1997.pdf","9-1/1993-2001.pdf","9-1/1998-2005.pdf","9-1/2002-2008.pdf","9-1/2006-2010.pdf"],
+   "SubComp": ["9.1.1 - Reduction of greenhouse gas [GHG] emissions","9.1.2 - Process efficiency"]
  },
  {
    "OECD_Class": "9.2",
    "Description": "TECHNOLOGIES RELATING TO CHEMICAL INDUSTRY",
-   "MapsFiles": ["9-2/1970-1983.pdf","9-2/1977-1988.pdf","9-2/1984-1993.pdf","9-2/1989-1997.pdf","9-2/1994-2001.pdf","9-2/1998-2005.pdf","9-2/2002-2008.pdf","9-2/2006-2010.pdf"]
+   "MapsFiles": ["9-2/1970-1983.pdf","9-2/1977-1988.pdf","9-2/1984-1993.pdf","9-2/1989-1997.pdf","9-2/1994-2001.pdf","9-2/1998-2005.pdf","9-2/2002-2008.pdf","9-2/2006-2010.pdf"],
+   "SubComp": ["9.2.1 - General improvement of production processes causing greenhouse gases [GHG] emissions","9.2.2 - Improvements relating to chlorine production","9.2.3 - Improvements relating to adipic acid or caprolactam production","9.2.4 - Improvements relating to chlorodifluoromethane [HCFC-22] production","9.2.5 - Improvements relating to the production of other chemicals or pharmaceuticals"]
  },
  {
    "OECD_Class": "9.3",
    "Description": "TECHNOLOGIES RELATING TO OIL REFINING AND PETROCHEMICAL INDUSTRY",
-   "MapsFiles": ["9-3/1970-2004.pdf","9-3/1987-2006.pdf","9-3/2005-2007.pdf","9-3/2007-2008.pdf","9-3/2008-2009.pdf","9-3/2009-2010.pdf"]
+   "MapsFiles": ["9-3/1970-2004.pdf","9-3/1987-2006.pdf","9-3/2005-2007.pdf","9-3/2007-2008.pdf","9-3/2008-2009.pdf","9-3/2009-2010.pdf"],
+   "SubComp": ["9.3.1 - Reduction of greenhouse gas [GHG] emissions during production processes","9.3.2 - Bio-feedstock","9.3.3 - Carbon capture or storage [CCS] specific to hydrogen production","9.3.4 - Ethylene production"]
  },
  {
    "OECD_Class": "9.4",
    "Description": "TECHNOLOGIES RELATING TO THE PROCESSING OF MINERALS",
-   "MapsFiles": ["9-4/1970-1988.pdf","9-4/1981-1994.pdf","9-4/1989-1998.pdf","9-4/1995-2001.pdf","9-4/1999-2004.pdf","9-4/2002-2006.pdf","9-4/2005-2008.pdf","9-4/2007-2010.pdf"]
+   "MapsFiles": ["9-4/1970-1988.pdf","9-4/1981-1994.pdf","9-4/1989-1998.pdf","9-4/1995-2001.pdf","9-4/1999-2004.pdf","9-4/2002-2006.pdf","9-4/2005-2008.pdf","9-4/2007-2010.pdf"],
+   "SubComp": ["9.4.1 - Production of cement","9.4.2 - Cement grinding","9.4.3 - Manufacturing or processing of sand or stone","9.4.4 - Production or processing of lime","9.4.5 - Glass production","9.4.6 - Production of ceramic materials or ceramic elements"]
  },
  {
    "OECD_Class": "9.5",
    "Description": "TECHNOLOGIES RELATING TO AGRICULTURE, LIVESTOCK OR AGROALIMENTARY INDUSTRIES",
-   "MapsFiles": ["9-5/1970-1989.pdf","9-5/1982-1997.pdf","9-5/1990-2002.pdf","9-5/1998-2006.pdf","9-5/2003-2008.pdf","9-5/2007-2009.pdf","9-5/2009-2010.pdf"]
+   "MapsFiles": ["9-5/1970-1989.pdf","9-5/1982-1997.pdf","9-5/1990-2002.pdf","9-5/1998-2006.pdf","9-5/2003-2008.pdf","9-5/2007-2009.pdf","9-5/2009-2010.pdf"],
+   "SubComp": ["9.5.1 - Agricultural machinery or equipment","9.5.2 - Reduction of greenhouse gas [GHG] emissions in agriculture","9.5.3 - Land use policy measures","9.5.4 - Afforestation or reforestation","9.5.5 - Livestock or poultry management","9.5.6 - Fishing and aquaculture","9.5.7 - Apiculture","9.5.8 - Food processing"]
  },
  {
    "OECD_Class": "9.6",
    "Description": "TECHNOLOGIES IN THE PRODUCTION PROCESS FOR FINAL INDUSTRIAL OR CONSUMER PRODUCTS",
-   "MapsFiles": ["9-6/1970-1997.pdf","9-6/1989-2001.pdf","9-6/1998-2004.pdf","9-6/2002-2006.pdf","9-6/2005-2008.pdf","9-6/2007-2009.pdf","9-6/2009-2010.pdf"]
+   "MapsFiles": ["9-6/1970-1997.pdf","9-6/1989-2001.pdf","9-6/1998-2004.pdf","9-6/2002-2006.pdf","9-6/2005-2008.pdf","9-6/2007-2009.pdf","9-6/2009-2010.pdf"],
+   "SubComp": ["9.6.1 - Technologies for shaping products (e.g. rolling metal, forging, hammering, pressing or riveting)","9.6.2 - Technologies for metal working","9.6.3 - Technologies for printing, lining or stamping machines","9.6.4 - Technologies for working on wood, veneer or plywood","9.6.5 - Technologies for production of paper and paper articles","9.6.6 - Technologies for working on or processing of plastics","9.6.7 - Technologies for conveying, packing or storing of goods","9.6.8 - Other manufacturing technologies (e.g., for mixing, separation, applying liquids, drying, etc.)","9.6.9 - Manufacturing of products or systems for producing renewable energy (e.g. wind turbines)","9.6.10 - Manufacturing of batteries and fuel cells","9.6.11 - Manufacturing or assembling of vehicles","9.6.12 - Manufacturing of electric and electronic components of products","9.6.13 - Technologies for production or treatment of textiles and foot wear","9.6.14 - Technologies for production of tobacco products"]
  },
  {
    "OECD_Class": "9.7",
    "Description": "CLIMATE CHANGE MITIGATION TECHNOLOGIES FOR SECTOR-WIDE APPLICATIONS",
-   "MapsFiles": ["9-7/1970-1998.pdf","9-7/1990-2003.pdf","9-7/1999-2006.pdf","9-7/2004-2008.pdf","9-7/2007-2009.pdf","9-7/2009-2010.pdf"]
+   "MapsFiles": ["9-7/1970-1998.pdf","9-7/1990-2003.pdf","9-7/1999-2006.pdf","9-7/2004-2008.pdf","9-7/2007-2009.pdf","9-7/2009-2010.pdf"],
+   "SubComp": []
  },
  {
    "OECD_Class": "9.8",
    "Description": "ENABLING TECHNOLOGIES WITH A POTENTIAL CONTRIBUTION TO GHG EMISSIONS MITIGATION",
-   "MapsFiles": ["9-8/1970-1993.pdf","9-8/1990-1997.pdf","9-8/1994-2000.pdf","9-8/1998-2002.pdf","9-8/2001-2004.pdf","9-8/2003-2006.pdf","9-8/2005-2008.pdf","9-8/2007-2010.pdf"]
+   "MapsFiles": ["9-8/1970-1993.pdf","9-8/1990-1997.pdf","9-8/1994-2000.pdf","9-8/1998-2002.pdf","9-8/2001-2004.pdf","9-8/2003-2006.pdf","9-8/2005-2008.pdf","9-8/2007-2010.pdf"],
+   "SubComp": []
  }
 ]

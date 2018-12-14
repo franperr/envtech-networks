@@ -91,6 +91,14 @@ The cluster analysis has been conducted in several overlapping periods. You can 
 	<p>These plots represent the average number of patent families and the average annual growth of patent families over a 5 years period for <em><span class="class_name"></span></em>, starting from 1971.</p>
 	<img id="evolgraph" src="" width="100%"> 
 </div>
+<div id="components">
+  <h3>Composition of <span class="class_name"></span></h3>
+  <div id="ComponentsExist">
+    <ul id="CompList">
+    </ul>
+  </div>
+  <p>The list of corresponding IPC/CPC code is available <a href="https://www.oecd.org/environment/consumption-innovation/ENV-tech%20search%20strategies,%20version%20for%20OECDstat%20(2016).pdf" target="_blank">here</a></p>
+</div>
 <div id="footer" style="text-align:right;padding: 15px 0px; border-top: 1px solid #ccc;">
   <span style="display: inline-block; vertical-align: middle; line-height: normal;">Made with &nbsp;&nbsp;</span>
   <a href="https://www.cortext.net/" target="_blank" style="display: inline-block; vertical-align: middle; line-height: normal;padding:0px 10px;">
@@ -156,6 +164,9 @@ var evol_img = datafile.replace('.', '_');
   // Loading evolution graph
   $("#evolgraph").attr("src","./evol/" + evol_img + "_.png");
 
+  // Hiding possible list of components
+  $('#CompList').hide();
+
   // Loading JSON and populating dropdown menu and map links
   $.getJSON("data/categories.json")
     .done(function( data ) {
@@ -183,7 +194,15 @@ var evol_img = datafile.replace('.', '_');
         // Add map links
         if (item.OECD_Class == datafile) {
           $.each( item.MapsFiles, function( index, value ){
-            $('#maplinks').append('<a href="maps/'+value+'" target="_blank">'+basename(value)+'</a> - ');
+            $('#maplinks').append('<a href="maps/'+value+'" target="_blank">'+basename(value)+'</a> - ');            
+          });
+        }
+        
+        // Components
+        if (item.OECD_Class == datafile && item.SubComp.length > 0) {
+          $('#CompList').show();
+          $.each( item.SubComp, function( index, value ){
+            $('#CompList').append('<li>'+value+'</li>');
           });
         }
       });
